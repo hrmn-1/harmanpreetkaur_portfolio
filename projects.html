@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Projects</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000; /* Black background */
+      color: #fff; /* White text */
+      line-height: 1.6;
+    }
+
+    /* Section Styling */
+    section {
+      width: 90%;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    /* Title Styling */
+    h2 {
+      margin-bottom: 20px;
+      font-size: 4rem;
+      color: Pink;
+    }
+
+    /* Project Container Styling (Using Flexbox) */
+    .projects {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+    }
+
+    /* Individual Project Styling */
+    .project {
+      background-color: grey; /* White background for project */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover Effect on Projects */
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    /* Image Styling */
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    /* Heading Styling */
+    .project h6 {
+      font-size: 1.2rem;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    /* Paragraph Styling */
+    .project p {
+      font-size: 1em;
+      color: pink;
+    }
+
+    /* Media Query for Smaller Screens (e.g., tablets, mobile) */
+    @media (max-width: 768px) {
+      .project {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h2>Latest Projects</h2>
+
+  <div class="projects">
+    <div class="project">
+      <img src="portfolio.png" alt="Personal Blog Site">
+      <h6>Personal Portfolio Site</h6>
+      <p>A personal portfolio created with HTML, CSS, and JavaScript. Features include a responsive design, showcasing my work and skills.</p>
+    </div>
+
+    <div class="project">
+      <img src="starting.png" alt="Project Work">
+      <h6>Fitness Tracking Software</h6>
+      <p>A fitness tracking app that helps users monitor their health goals and progress with an easy-to-use interface and this is group project in java programming 3.</p>
+    </div>
+
+    <div class="project">
+      <img src="github.png" alt="github">
+      <h6>github account</h6>
+      <p>On github i uploaded all my assignment which i did in whole semester like javascript, java programming projects.</p>
+      <a href="https://github.com/hrmn-1" class="Social class" style="color: #f55582;">Visit My GitHub</a>
+    </div>
+
+    <div class="project">
+      <img src="Business_Site.png" alt="Personal Business Site">
+      <h6>Personal Business Site</h6>
+      <p>This project i did in one first semester in html and css course. so this is the my first website which i made.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

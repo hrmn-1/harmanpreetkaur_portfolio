@@ -1,0 +1,670 @@
+/*********************************************************************************
+**********************************************************************************
+
+Website Name:- Portfolio website
+Website Author:- harmanpreet kaur
+Student ID:- 0858805
+Copyright 2013. All Rights Reserved
+
+**********************************************************************************
+**********************************************************************************
+
+Typography guide
+*******************
+Body Text:
+
+Font Family: 'Josefin Sans', sans-serif;
+Font Size: 20px;
+Color: White (color: white;)
+Headings:
+
+Font Family: 'Roboto', sans-serif;
+Font Sizes:
+h1: 75px
+h2, nav h2: 35px
+h3: 25px
+h4: 20px
+h5: 22px
+***********************************************************************************
+***********************************************************************************
+Colors:
+****************
+h1, nav h1: #f55582 (light pink)
+h2 (article section headings): #f55582 (light pink)
+h3 (header section headings): White (color: white;)
+h4 (header section headings): White (color: white;)
+h5 (article section headings): White (color: white;)
+#fcfc
+Links:
+
+Color: White (color: white;)
+Hover Color: #f55582 (light pink)
+
+**********************************************************************************/
+
+
+/*********************************************************************************
+**********************************************************************************
+CSS Reset:----------------------------------------------(Global Styles)
+Global Styles (* Selector):-----------------------------All Files
+Body Styles:--------------------------------------------All Files
+Header Styles:------------------------------------------All Files
+Navigation Styles:--------------------------------------All Files
+Content Section within Header:--------------------------All Files
+Main Sections Styling:----------------------------------All Files
+Article Styling:----------------------------------------All Files
+Section Styling for Projects:---------------------------All Files
+***************************************************************************************
+***************************************************************************************/
+
+ /* CSS Reset */
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+     display: block;
+ }
+
+/* Font face rules for Roboto */
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Font face rules for Josefin Sans */
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/josefin-sans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Global reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: black;
+}
+
+/* Header styles */
+header {
+    height: 100vh; 
+    width: 100%;
+    background-color: black;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    align-items: center;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+nav h2 {
+    color: #f55582;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #f55582;
+    transition: .4s;
+}
+
+/* Link button in navigation */
+nav > a {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f55582; 
+}
+
+/* Logo image in navigation */
+nav img {
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    
+}
+
+/* Content section within header */
+
+header > section {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    
+}
+
+header h1 {
+    color: #f55582;
+    margin: 20px 0px 20px;
+    font-size: 85px;
+}
+
+header h3 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+header h4 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+/* Form within header section */
+header section form {
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+
+header section form input[type="email"] {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #f55582;
+    outline: none;
+    border-radius: 30px;
+}
+
+header section form input[type="submit"] {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #f9004d;
+    color: white;
+    top: 6px;
+    right: 6px;
+}
+
+/* Main sections styling */
+section {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+/* Image styling within sections */
+section img {
+    height: 600px; 
+    width: 530px; 
+}
+
+/* Article styling */
+article {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+article section {
+    width: 550px;
+}
+
+article h2 {
+    color: #f55582;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+article h5 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+article p {
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 45px;
+}
+
+article a {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 2px solid #f9004d;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+/* Section styling for projects */
+section:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    background-color: #222;
+    text-align: center;
+}
+
+section:nth-of-type(2) h2 {
+    color: lightyellow;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+/* Individual project styling */
+section:nth-of-type(2) div {
+    display: inline-block;
+    width: 22%;
+    margin: 1.5%;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+}
+
+section:nth-of-type(2) div img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+section:nth-of-type(2) div h6 {
+    padding: 10px;
+    background-color: #f55582;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+}
+
+section:nth-of-type(2) div p {
+    padding: 10px;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Main section for columns layout */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Individual column styling */
+main > section {
+    flex: 1 1 20%; 
+    height: 600px; 
+    margin: 0 0.9rem; 
+    background-color: rgb(73, 70, 70);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', cursive;
+}
+
+main > section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #f9004d;
+}
+
+main > section ul {
+    margin-left: 20px;
+    padding-left: 5px;
+}
+
+main > section img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/* Specific styles for third column image */
+main > section:nth-of-type(3) img {
+    width: 100%; 
+    height: 50%; 
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/* General text styling */
+p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: lightyellow;
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+
+/* Section heading styles */
+section h2 {
+    color:#f55582;
+    text-align: center;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+
+/* Form container styling */
+form[name="contactForm"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form[name="contactForm"] div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+form[name="contactForm"] label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+form[name="contactForm"] input[type="text"],
+form[name="contactForm"] input[type="tel"],
+form[name="contactForm"] input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #f55582;
+    border-radius: 5px;
+    outline: none;
+    background-color: #222;
+    color: white;
+}
+
+form[name="contactForm"] input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f55582;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form[name="contactForm"] input[type="submit"]:hover {
+    background-color: #f9004d;
+}
+form[name="contactForm"] {
+    max-width: 900px; 
+    
+}
+form[name="contactForm"] {
+    height: 600px; 
+}
+/* Responsive adjustments */
+@media only screen and (max-width: 1024px) {
+    header {
+        height: auto;
+        padding-bottom: 50px; 
+    }
+
+    nav {
+        display: block;
+        padding: 20px;
+    }
+
+    nav img {
+        width: 50%;
+        position: absolute;
+        margin: 20px auto;
+        display: block;
+    }
+
+    nav h2 {
+        font-size: 25px;
+    }
+
+    header h1 {
+        font-size: 50px;
+        margin: 10px 0;
+    }
+
+    header h3 {
+        font-size: 20px;
+    }
+
+    header h4 {
+        font-size: 18px;
+    }
+
+    header section {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    header section form {
+        width: 100%;
+        padding: 0 10px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    main {
+        display: block;
+    }
+
+    main > section {
+        width: 100%;
+        margin: 10px 0;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+    }
+
+    article {
+        display: block;
+    }
+
+    article img {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    article section {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    section:nth-of-type(2) div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section:nth-of-type(2) div img {
+        width: 100%;
+        height: auto;
+    }
+
+    form[name="contactForm"] {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 768px) {
+    nav h2 {
+        font-size: 20px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header h3 {
+        font-size: 18px;
+    }
+
+    header h4 {
+        font-size: 16px;
+    }
+
+    article h2 {
+        font-size: 50px;
+    }
+
+    article h5 {
+        font-size: 18px;
+    }
+
+    article p {
+        font-size: 14px;
+    }
+
+    main > section {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+    }
+
+    section:nth-of-type(2) div {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    form[name="contactForm"] {
+        padding: 5px;
+    }
+}
+
+/* Smaller mobile phones */
+@media only screen and (max-width: 480px) {
+    nav h2 {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header h3 {
+        font-size: 16px;
+    }
+
+    header h4 {
+        font-size: 14px;
+    }
+
+    article h2 {
+        font-size: 40px;
+    }
+
+    article h5 {
+        font-size: 16px;
+    }
+
+    article p {
+        font-size: 12px;
+    }
+
+    main > section {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+    }
+
+    section:nth-of-type(2) div {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    form[name="contactForm"] {
+        padding: 5px;
+    }
+
+

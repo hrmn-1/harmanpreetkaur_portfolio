@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Skills</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and general styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    /* Skills Page Styles */
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #f55582; /* Light pink color */
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #f55582;
+      padding-bottom: 5px;
+    }
+
+    /* List styling */
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '•';
+      color: #f55582;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive styling */
+    @media only screen and (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      ul li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<h1>My Skills</h1>
+
+<section>
+  <h2>Technical Skills</h2>
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React.js</li>
+    <li>Node.js</li>
+    <li>Angular</li>
+    <li>PHP</li>
+    <li>MySQL</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Design Skills</h2>
+  <ul>
+    <li>UI/UX Design</li>
+    <li>Wireframing</li>
+    <li>Responsive Design</li>
+    <li>Prototyping</li>
+    <li>Adobe Photoshop</li>
+    <li>Figma</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2024 My Portfolio | Built with ❤️ by Me</p>
+</footer>
+</body>
+</html>
