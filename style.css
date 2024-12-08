@@ -86,7 +86,7 @@ Section Styling for Projects:---------------------------All Files
 /* Font face rules for Roboto */
 @font-face {
     font-family: 'Roboto';
-    src: url('fonts/roboto-regular.ttf') format('truetype');
+
     font-weight: normal;
     font-style: normal;
 }
@@ -94,7 +94,7 @@ Section Styling for Projects:---------------------------All Files
 /* Font face rules for Josefin Sans */
 @font-face {
     font-family: 'Josefin Sans';
-    src: url('fonts/josefin-sans-regular.ttf') format('truetype');
+
     font-weight: normal;
     font-style: normal;
 }
